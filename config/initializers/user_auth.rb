@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 # api/config/initializers/user_auth.rb
-=======
->>>>>>> main
 module UserAuth
     # access tokenの有効期限
     mattr_accessor :access_token_lifetime
@@ -23,11 +20,7 @@ module UserAuth
     mattr_accessor :token_issuer
     self.token_issuer = "http://localhost:3000"
   
-<<<<<<< HEAD
     # JWTの受信者を識別する文字列(保護リソースURL
-=======
-    # JWTの受信者を識別する文字列(保護リソースURL)
->>>>>>> main
     mattr_accessor :token_audience
     self.token_audience = "http://localhost:3000"
   
