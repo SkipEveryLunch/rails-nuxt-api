@@ -16,8 +16,10 @@ module UserAuth
       else
         # encode
         @user_id = encrypt_for(user_id)
+        #token.payload[:jti]にrefresh_jtiを保存
         @payload = claims
         @token = JWT.encode(@payload, secret_key, algorithm, header_fields)
+        # userテーブルにjtiを保存
         remember_jti(user_id)
       end
     end
